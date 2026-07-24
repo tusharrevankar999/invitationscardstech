@@ -1,0 +1,8 @@
+{
+  "name": "Artful Invites - Digital Animated Invitation",
+  "description": "A luxury, animated digital invitation experience with interactive envelope opening, scroll-driven parallax photo reveals, live countdown, interactive RSVP, schedule timeline, dress code guide, and venue directions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
