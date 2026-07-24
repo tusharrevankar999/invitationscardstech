@@ -15,7 +15,6 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ onAddRsvp }) => {
     plusOne: false,
     plusOneName: '',
     dietary: '',
-    mealPreference: 'Pan-Seared Chilean Sea Bass',
     songRequest: '',
     message: '',
   });
@@ -35,7 +34,6 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ onAddRsvp }) => {
       plusOne: formData.plusOne,
       plusOneName: formData.plusOneName,
       dietary: formData.dietary,
-      mealPreference: formData.mealPreference,
       songRequest: formData.songRequest,
       message: formData.message,
       createdAt: new Date().toLocaleDateString('en-US', {
@@ -50,23 +48,7 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ onAddRsvp }) => {
     setSubmitted(true);
   };
 
-  const mealOptions = [
-    {
-      id: 'seabass',
-      title: 'Pan-Seared Chilean Sea Bass',
-      desc: 'Accompanied by saffron risotto, braised leeks, and Meyer lemon beurre blanc.'
-    },
-    {
-      id: 'filet',
-      title: 'Prime Aged Beef Tenderloin Filet',
-      desc: 'Truffle potato puree, roasted baby carrots, and rosemary cabernet reduction.'
-    },
-    {
-      id: 'risotto',
-      title: 'Wild Mushroom & Summer Truffle Risotto (V / GF)',
-      desc: 'Arborio rice, chanterelles, aged parmigiano-reggiano, and micro herbs.'
-    }
-  ];
+  // Removed entrée options as requested
 
   return (
     <section id="rsvp" className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto relative">
@@ -236,42 +218,7 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ onAddRsvp }) => {
               </div>
             )}
 
-            {/* Meal Choice Selection */}
-            {formData.attending === 'yes' && (
-              <div>
-                <label className="block font-serif text-xl font-bold text-[#2C2825] mb-3">
-                  Entrée Choice
-                </label>
-
-                <div className="space-y-3">
-                  {mealOptions.map((meal) => (
-                    <label
-                      key={meal.id}
-                      className={`p-4 rounded-xl border flex items-start gap-3 cursor-pointer transition-all ${formData.mealPreference === meal.title
-                          ? 'bg-[#E8E2D5]/50 border-[#D4AF37] ring-1 ring-[#D4AF37]'
-                          : 'bg-white border-[#D4AF37]/20 hover:border-[#D4AF37]/50'
-                        }`}
-                    >
-                      <input
-                        type="radio"
-                        name="mealPreference"
-                        checked={formData.mealPreference === meal.title}
-                        onChange={() => setFormData({ ...formData, mealPreference: meal.title })}
-                        className="mt-1 text-[#D4AF37] focus:ring-[#D4AF37]"
-                      />
-                      <div>
-                        <span className="font-serif font-bold text-base text-[#2C2825] block">
-                          {meal.title}
-                        </span>
-                        <span className="font-sans text-xs text-[#5A524C] block mt-0.5">
-                          {meal.desc}
-                        </span>
-                      </div>
-                    </label>
-                  ))}
-                </div>
-              </div>
-            )}
+            {/* Entrée Choice Removed */}
 
             {/* Dietary Restrictions & Song Request */}
             {formData.attending === 'yes' && (
@@ -358,11 +305,6 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ onAddRsvp }) => {
 
               {lastRsvp?.attending === 'yes' && (
                 <>
-                  <div className="flex justify-between border-b border-[#E8E2D5] pb-2">
-                    <span className="font-bold uppercase tracking-wider text-[#8B6E14]">Entrée</span>
-                    <span>{lastRsvp?.mealPreference}</span>
-                  </div>
-
                   {lastRsvp?.plusOne && (
                     <div className="flex justify-between border-b border-[#E8E2D5] pb-2">
                       <span className="font-bold uppercase tracking-wider text-[#8B6E14]">Plus One</span>
