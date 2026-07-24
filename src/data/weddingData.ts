@@ -1,5 +1,10 @@
 import { StoryEvent, GalleryPhoto, TimelineItem, ColorSwatch, HotelInfo, RegistryItem, GuestbookMessage } from '../types';
 
+import firstMeetingImg from '../assets/images/journey_first_meeting_1784882048633.jpg';
+import coastalTravelsImg from '../assets/images/coastal_travels_modern_1784889324776.jpg';
+import proposalImg from '../assets/images/journey_proposal_1784882202687.jpg';
+import foreverImg from '../assets/images/journey_forever_1784882221756.jpg';
+
 export const WEDDING_DETAILS = {
   couple: {
     groom: "Sara",
@@ -59,7 +64,7 @@ export const STORY_EVENTS: StoryEvent[] = [
     title: "First Serendipitous Connection",
     location: "Panaji, Goa",
     description: "A shared love for music, travel, and warm coffee in the Latin Quarter of Fontainhas sparked a deep connection that turned hours into moments.",
-    image: "/src/assets/images/journey_first_meeting_1784882048633.jpg",
+    image: firstMeetingImg,
     quote: "“I knew from our very first conversation in Panaji that Laksh was extraordinary.” — Sara"
   },
   {
@@ -67,7 +72,7 @@ export const STORY_EVENTS: StoryEvent[] = [
     title: "Coastal Adventures & Travels",
     location: "Coastal Escapes & Abroad",
     description: "Styling in modern jackets and sunglasses, exploring scenic cliffside overlooks, coastal roads, and international ocean vistas—discovering that every trip together makes life an unforgettable adventure.",
-    image: "/src/assets/images/coastal_travels_modern_1784889324776.jpg",
+    image: coastalTravelsImg,
     quote: "“Every trip together proved how effortlessly we complement each other.” — Laksh"
   },
   {
@@ -75,7 +80,7 @@ export const STORY_EVENTS: StoryEvent[] = [
     title: "The Golden Sunset Engagement",
     location: "Varca Beach Resort, Goa",
     description: "Under a glowing golden sunset sky over the Arabian Sea with family blessings, Sara got down on one knee to ask Laksh for forever.",
-    image: "/src/assets/images/journey_proposal_1784882202687.jpg",
+    image: proposalImg,
     quote: "“Hand in hand, united by love and blessed by two wonderful families.”"
   },
   {
@@ -83,7 +88,7 @@ export const STORY_EVENTS: StoryEvent[] = [
     title: "Beginning Our Forever Chapter",
     location: "South Goa, Goa",
     description: "Ready to walk down the aisle and begin our lifelong journey as husband and wife surrounded by everyone we love.",
-    image: "/src/assets/images/journey_forever_1784882221756.jpg",
+    image: foreverImg,
     quote: "“Two souls, one heart, together forever.”"
   }
 ];

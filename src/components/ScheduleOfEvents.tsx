@@ -3,11 +3,10 @@ import { motion, AnimatePresence, Variants } from 'motion/react';
 import { Calendar, Clock, MapPin, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { FallingPetals } from './FallingPetals';
 
-// Image paths for AI generated cartoon illustrations
-const haldiImg = '/src/assets/images/haldi_event_illustration_1784879492930.jpg';
-const mehendiImg = '/src/assets/images/mehendi_event_illustration_1784879517179.jpg';
-const marriageImg = '/src/assets/images/marriage_event_illustration_1784879535239.jpg';
-const receptionImg = '/src/assets/images/reception_event_illustration_1784879550858.jpg';
+import haldiImg from '../assets/images/haldi_event_illustration_1784879492930.jpg';
+import mehendiImg from '../assets/images/mehendi_event_illustration_1784879517179.jpg';
+import marriageImg from '../assets/images/marriage_event_illustration_1784879535239.jpg';
+import receptionImg from '../assets/images/reception_event_illustration_1784879550858.jpg';
 
 export interface EventSlide {
   id: string;
